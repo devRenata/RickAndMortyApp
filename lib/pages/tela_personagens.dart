@@ -104,7 +104,7 @@ class maisInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Detalhes do Personagem")),
+      appBar: AppBar(title: Text(personagens.name)),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

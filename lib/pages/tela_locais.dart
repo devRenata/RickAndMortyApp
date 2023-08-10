@@ -31,6 +31,7 @@ class _TelaLocaisState extends State<TelaLocais> {
             name: local['name'],
             type: local['type'],
             dimension: local['dimension'],
+            created: local['created'],
           );
           listaLocais.add(l);
         });
@@ -38,16 +39,17 @@ class _TelaLocaisState extends State<TelaLocais> {
       }
       return listaLocais;
     } else {
-      throw Exception("Falha ao carregar os dados do personagem.");
+      throw Exception("Falha ao carregar os dados do local.");
     }
   }
 
   @override
   Widget build(BuildContext context) {
     bool atualizou = false;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Tela de EPs"),
+        title: const Text("Tela de Locais"),
       ),
       body: FutureBuilder(
         initialData: const [],
@@ -96,8 +98,21 @@ class maisInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Detalhes do local")),
-      body: const Text("corpo de detalhes do local"),
+      appBar: AppBar(title: Text(local.name)),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              "Tipo: ${local.type}",
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            Text("Dimensão: ${local.dimension}"),
+            Text("Criado em: ${local.created}")
+          ],
+        ),
+      ),
     );
   }
 }

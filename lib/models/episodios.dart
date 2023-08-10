@@ -12,18 +12,18 @@ class CabecalhoRequisicao {
   });
 }
 
-class Locais {
+class Episodio {
   int id;
   String name;
-  String type;
-  String dimension;
+  String airDate;
+  String episode;
   String created;
 
-  Locais({
+  Episodio({
     required this.id,
     required this.name,
-    required this.type,
-    required this.dimension,
+    required this.airDate,
+    required this.episode,
     required this.created,
   });
 }
