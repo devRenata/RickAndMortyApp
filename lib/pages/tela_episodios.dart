@@ -29,7 +29,7 @@ class _TelaEpisodiosState extends State<TelaEpisodios> {
           Episodio e = Episodio(
             id: episodio['id'],
             name: episodio['name'],
-            airDate: episodio['airDate'],
+            airDate: episodio['air_date'],
             episode: episodio['episode'],
             created: episodio['created'],
           );
@@ -70,7 +70,7 @@ class _TelaEpisodiosState extends State<TelaEpisodios> {
             itemBuilder: (context, index) {
               return ListTile(
                 title: Text(episodios[index].name),
-                subtitle: Text(episodios[index].type),
+                subtitle: Text(episodios[index].episode),
                 trailing: IconButton(
                   onPressed: () {
                     Navigator.push(

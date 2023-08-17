@@ -49,6 +49,7 @@ class _TelaPersonagensState extends State<TelaPersonagens> {
   @override
   Widget build(BuildContext context) {
     bool atualizou = false;
+    
     return Scaffold(
       appBar: AppBar(title: const Text("Lista de Personagens")),
       body: FutureBuilder(
